@@ -29,6 +29,12 @@
 #define __NANOMSG_H__
 
 #define NN_SOCKET_METATABLE	"nanomsg for Lua socket"
+#define NN_POLL_ARR_METATABLE	"nanomsg for Lua poll arr"
+#define NN_POLL_FD_METATABLE	"nanomsg for Lua poll fd"
+
+#ifndef luaL_checkint
+#define luaL_checkint (int)luaL_checkinteger
+#endif
 
 struct int_constant {
 	char *name;
